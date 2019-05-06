@@ -47,4 +47,4 @@ This means updating the SQL database to reflect the remaining quantity.
 Once the update goes through, show the customer the total cost of their purchase.
 
 
-Please submit the link to the Github Repository!
+Check out the site at https://robazprogrammer.github.io/Node.js---MySQL/
