@@ -29,7 +29,7 @@ function displayProducts() {
         console.log(err)
       } else {
       for (var i = 0; i < res.length; i++) {
-      console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].department_name + " | " + res[i].price + " | " +
+      console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].department_name + " | $" + Number(res[i].price).toFixed(2) + " | " +
         res[i].stock_quantity)}}
         console.log("-----------------------------------");
       productid();
@@ -63,7 +63,10 @@ function displayProducts() {
               if (stockQuantity > prodCount) {
                 var newCount = (stockQuantity - prodCount)
                   updateStock(prodId, newCount);
-              } else {console.log("Insufficient quantity!")}
+              } else {
+                  console.log("Insufficient quantity!")
+                  productid()
+            }
             })
           })
         };
